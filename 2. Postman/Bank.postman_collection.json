@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "9cd897f7-a6cf-4355-a6ea-c3897590461f",
+		"name": "Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28265803",
+		"_collection_link": "https://dark-crescent-554959.postman.co/workspace/ecua3d~d7610407-fd14-4e69-96c0-f8a85c403d86/collection/28265803-9cd897f7-a6cf-4355-a6ea-c3897590461f?action=share&source=collection_link&creator=28265803"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9001/clients/client",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"clients",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find By CI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9001/clients/client/findBy?ci=1727384892",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"clients",
+								"client",
+								"findBy"
+							],
+							"query": [
+								{
+									"key": "ci",
+									"value": "1727384892"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save new client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Juan Osorio\",\r\n    \"ci\": \"1712125678\",\r\n    \"gender\": \"Masculino\",\r\n    \"age\": \"50\",\r\n    \"address\": \"13 Junio y Equinoccial\",\r\n    \"phone\": \"0975489623\",\r\n    \"password\": \"90635\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/clients/client",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"clients",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marianela Montalvo\",\r\n    \"ci\": \"1712123424\",\r\n    \"gender\": \"Femenino\",\r\n    \"age\": \"30\",\r\n    \"address\": \"Amazona y NNUU\",\r\n    \"phone\": \"0975483433\",\r\n    \"password\": \"6789922310\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/clients/client/7",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"clients",
+								"client",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marianela Montalvo\",\r\n    \"ci\": \"1712123424\",\r\n    \"gender\": \"Femenino\",\r\n    \"age\": \"30\",\r\n    \"address\": \"Amazona y NNUU\",\r\n    \"phone\": \"0975489653\",\r\n    \"password\": \"6789910\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/clients/client/7",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"clients",
+								"client",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9002/transactions/account",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"transactions",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find Accounts By CI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9002/transactions/account/1727384892",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"transactions",
+								"account",
+								"1727384892"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save new account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ci\": \"1727384892\",\r\n    \"typeAccount\": \"Corriente\",\r\n    \"status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9002/transactions/account",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"transactions",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ci\": \"1727384892\",\r\n    \"typeAccount\": \"Corriente\",\r\n    \"status\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9002/transactions/account/1000",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"transactions",
+								"account",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marianela Montalvo\",\r\n    \"ci\": \"1712123424\",\r\n    \"gender\": \"Femenino\",\r\n    \"age\": \"30\",\r\n    \"address\": \"Amazona y NNUU\",\r\n    \"phone\": \"0975489653\",\r\n    \"password\": \"6789910\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9002/transactions/account/1000",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"transactions",
+								"account",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9002/transactions/transaction",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"transactions",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estado de cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9002/transactions/transaction/reportes/1727384892?startDate=2024-08-01&endDate=2024-08-03",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"transactions",
+								"transaction",
+								"reportes",
+								"1727384892"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-08-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-08-03"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save new transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountId\": 1000,\r\n    \"amount\": -10.31\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9002/transactions/transaction",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"transactions",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  clients:
+    build:
+      context: ./clients
+      dockerfile: docker/Dockerfile
+    environment:
+      - TZ=America/Guayaquil
+    ports:
+      - "9001:9001"
+    networks:
+      - springboot-network
+
+  transactions:
+    build:
+      context: ./transactions
+      dockerfile: docker/Dockerfile
+    environment:
+      - TZ=America/Guayaquil
+    ports:
+      - "9002:9002"
+    networks:
+      - springboot-network
+
+networks:
+  springboot-network:
+    driver: bridge

@@ -1,0 +1,16 @@
+server:
+  servlet:
+    context-path: /transactions
+  port: 9002
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.100.17:5432/bank
+    username: postgres
+    password: homeassistant
+  jpa:
+    show-sql: false
+
+transactions:
+  services:
+    clients:
+      url: http://clients:9001/clients
